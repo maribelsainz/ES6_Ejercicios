@@ -164,10 +164,9 @@ npx webpack --config webpack.config.js
 21. Instalar Babel utilizando la pagina de [Babel Setup](https://babeljs.io/setup#installation). Ejecutando el comando:
 
 ```bash
- npm install @babel/preset-env --save-dev
+ npm install --save-dev babel-loader @babel/core
 ```
-
-22. Crear en la raiz del repositorio el archivo .babelrc y agregar las siguientes lineas:
+22. Agregar configuración al archivo webpack.config.js (dentro de module.exports):
 
 ```JS
 module: {
@@ -176,8 +175,13 @@ module: {
   ]
 }
 ```
+23. Ejecutar el siguiente comando y luego crear en la raiz del repositorio el archivo .babelrc:
 
-23. Pegar el json en el archivo .babelrc:
+```bash
+ npm install @babel/preset-env --save-dev
+```
+
+24. Pegar el json en el archivo .babelrc:
 
 ```JS
 {
