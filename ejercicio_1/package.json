@@ -1,0 +1,21 @@
+{
+  "name": "ejercicio_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "produccion": "webpack -p",
+    "watch": "webpack --w --mode development"
+  },
+  "keywords": [
+    "ES6",
+    "NodeJS"
+  ],
+  "author": "Juan Duran",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

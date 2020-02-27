@@ -67,3 +67,125 @@ Para instalar ambas herramientas en un solo comando en la terminal, se debe ejec
 ```bash
 npm i webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/preset-env babel-loader -D
 ```
+
+Instalando Webpack y Babel, pasos:
+1. Verificar si posee NodeJS y NPM con:
+
+```bash
+node -v
+npm -v
+```
+
+2. Crear la carpeta del proyecto. Sin espacios entre caracteres.
+3. Entrar a la carpeta mediante la terminal.
+4. Inicar el instalador de NodeJS
+
+```bash
+npm init -y
+```
+
+5. Se instala el WebPack con:
+
+```bash
+npm install webpack --save-dev
+```
+
+Nota: si esta paso u otro de install con npm genera vulnerabilidades, se debe ejecutar el `npm audit --force` para solicionar los detalles.
+
+6. Instalar el Webpack Cli con:
+
+```bash
+npm install webpack-cli --save-dev
+```
+
+7. Crear una carpeta de src y dentro de ella el index.js y en la carpeta raiz el index.html
+
+8. Ejecutar en el terminal los comandos de:
+
+```bash
+npx webpack
+```
+
+Nota: se genera un WARNING debido a que estamos trabajando en modo de producción. (normal)
+
+9. Crear el archivo en la carpeta raiz de webpack.config.js.
+
+10. Se mueve el archivo index.html a la carpeta dist creada en pasos anteriores.
+
+11. Crear el enlace en el archivo index.html al archivo main.js
+
+12. En el archivo de configuración de WebPack se copia el codigo:
+
+```JS
+const path = require('path');
+
+module.exports = {
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  }
+};
+```
+
+13. Se ejecuta el comando a continuación para compilar segun la configuracion del archivo webpack.config.js:
+
+```bash
+npx webpack --config webpack.config.js
+```
+
+14. Agregar el archivo compilado al index.html en el script.
+
+15. Agregar al archivo de packge.json el siguiente script:
+
+```JS
+"build": "webpack --mode development",
+```
+
+16. Ejecutar el comando `npm run build`
+
+17. Agregar al archivo de packge.json el siguiente script:
+
+```JS
+ "produccion": "webpack -p",
+```
+
+18. Ejecutar el comando `npm run produccion`
+
+19. Agregar al archivo de packge.json el siguiente script:
+
+```JS
+ "watch": "webpack --w --mode development"
+```
+
+20. Ejecutar el comando `npm run watch`
+
+21. Instalar Babel utilizando la pagina de [Babel Setup](https://babeljs.io/setup#installation). Ejecutando el comando:
+
+```bash
+ npm install @babel/preset-env --save-dev
+```
+22. Crear en la raiz del repositorio el archivo .babelrc y agregar las siguientes lineas:
+
+```JS
+module: {
+  rules: [
+    { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" }
+  ]
+}
+```
+23. Pegar el json en el archivo .babelrc:
+
+```JS
+{
+  "presets": ["@babel/preset-env"]
+}
+```
+
+
+
+Primera actividad para hoy:
+
+1. Inidcar a los facilitadores, como instalar y configurar en la pc webpack y babel.
+2. Ejemplos utilizando ES6 Modular con import y export. (parecido al desafío de hoy)
+3. Investigar y socializar: Paradigma Funcional, Recursividad, Programacion orientada a Eventos, Concurrencia y procesos paralelos, callbacks.
