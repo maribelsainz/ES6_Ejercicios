@@ -68,7 +68,8 @@ Para instalar ambas herramientas en un solo comando en la terminal, se debe ejec
 npm i webpack webpack-cli @babel/core @babel/plugin-proposal-object-rest-spread @babel/preset-env babel-loader -D
 ```
 
-Instalando Webpack y Babel, pasos:
+# Instalando Webpack y Babel, pasos:
+
 1. Verificar si posee NodeJS y NPM con:
 
 ```bash
@@ -90,7 +91,7 @@ npm init -y
 npm install webpack --save-dev
 ```
 
-Nota: si esta paso u otro de install con npm genera vulnerabilidades, se debe ejecutar el `npm audit --force` para solicionar los detalles.
+*Nota:* si esta paso u otro de install con npm genera vulnerabilidades, se debe ejecutar el `npm audit --force` para solicionar los detalles.
 
 6. Instalar el Webpack Cli con:
 
@@ -165,6 +166,7 @@ npx webpack --config webpack.config.js
 ```bash
  npm install @babel/preset-env --save-dev
 ```
+
 22. Crear en la raiz del repositorio el archivo .babelrc y agregar las siguientes lineas:
 
 ```JS
@@ -174,6 +176,7 @@ module: {
   ]
 }
 ```
+
 23. Pegar el json en el archivo .babelrc:
 
 ```JS
@@ -182,10 +185,8 @@ module: {
 }
 ```
 
-
-
 Primera actividad para hoy:
 
-1. Inidcar a los facilitadores, como instalar y configurar en la pc webpack y babel.
 2. Ejemplos utilizando ES6 Modular con import y export. (parecido al desafío de hoy)
+
 3. Investigar y socializar: Paradigma Funcional, Recursividad, Programacion orientada a Eventos, Concurrencia y procesos paralelos, callbacks.
